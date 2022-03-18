@@ -1,10 +1,10 @@
 package poker;
 
-public class card {
+public class Card {
 	public String suite;
 	public int number;
 	
-	public card(String inputS, int inputNum) {
+	public Card(String inputS, int inputNum) {
 		suite = inputS;
 		number = inputNum;
 	}

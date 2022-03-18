@@ -1,23 +1,28 @@
 package poker;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck {
-	public ArrayList<card> deck;
+	public ArrayList<Card> deck;
 	
 	public Deck() {
-		deck = new ArrayList<card>();
-		for(int i = 1; i < 13; i++) {
-			deck.add(new card("Diamonds", i));
-			deck.add(new card("Clubs", i));
-			deck.add(new card("Hearts", i));
-			deck.add(new card("Spades", i));
+		deck = new ArrayList<Card>();
+		for(int i = 1; i < 14; i++) {
+			deck.add(new Card("Diamonds", i));
+			deck.add(new Card("Clubs", i));
+			deck.add(new Card("Hearts", i));
+			deck.add(new Card("Spades", i));
 		}
 	}
-	public ArrayList<card> getDeck(){
+	Random pick = new Random();
+	
+	public ArrayList<Card> getDeck(){
 		return deck;
 	}
-	public card drawcard() {
-		return deck.remove(0);
+	public Card drawCard() {
+		int d = pick.nextInt(deck.size());
+		return deck.remove(d);
 	}
+	
 }

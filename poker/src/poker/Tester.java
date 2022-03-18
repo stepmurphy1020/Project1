@@ -2,10 +2,11 @@ package poker;
 
 public class Tester {
 	public static void main(String[] args) {
-		Deck test = new Deck();
+		HandEvaluator g = new HandEvaluator();
 		pokerhand Deal = new pokerhand();
-		System.out.println(Deal);
-		System.out.println(test.getHand());
+		Deal.draw();
+		System.out.println("Your Hand:");
+		System.out.println(g.hand);
 		}
 	}
 

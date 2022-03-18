@@ -1,11 +1,13 @@
 package poker;
 
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Collections;
 
 public class Deck {
 	public ArrayList<Card> deck;
-	public static ArrayList<Card> hand = new ArrayList<Card>(4);
+	public ArrayList<Card> shuffled;
+	
+	HandEvaluator K = new HandEvaluator();
 	
 	public Deck() {
 		deck = new ArrayList<Card>();
@@ -15,19 +17,15 @@ public class Deck {
 			deck.add(new Card("Hearts", i));
 			deck.add(new Card("Spades", i));
 		}
+		 Collections.shuffle(deck);
 	}
-	Random pick = new Random();
 	
 	public ArrayList<Card> getDeck(){
 		return deck;
 	}
+		
 	public Card drawCard() {
-		int d = pick.nextInt(deck.size());
-		System.out.println(deck.get(d));
-		hand.add(deck.get(d));
-		return deck.remove(d);
-	}
-	public static ArrayList<Card> getHand() {
-		return hand;
+		K.hand.add(deck.get(0));
+		return deck.remove(0);
 	}
 }

@@ -8,6 +8,7 @@ public class Card {
 		suite = inputS;
 		number = inputNum;
 	}
+	
 	@Override
 	public String toString() {
 		return number + " of " + suite;

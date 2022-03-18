@@ -7,6 +7,7 @@ public class Tester {
 		Deal.draw();
 		System.out.println("Your Hand:");
 		System.out.println(g.hand);
+		g.pair();
 		}
 	}
 

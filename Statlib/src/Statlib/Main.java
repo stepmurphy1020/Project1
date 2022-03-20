@@ -28,11 +28,16 @@ public class Main
     	StdDev sd = new StdDev();
     	System.out.println("Standard Deviation:"+sd.SD(array));*/
     	
-    	DistFac fac = new DistFac();
-    	System.out.println(fac.DistFac1(52, 49));
-    	System.out.println(fac.DistFac1(49, 52));
-    	
     	Binomial B = new Binomial();
     	System.out.println(B.Binomial1(12, .3, .7, 2));
+    	
+    	Poisson P = new Poisson();
+    	System.out.println(P.pois(4, 2, 4));
+    	
+    	Hypergeometric H = new Hypergeometric();
+    	System.out.println(H.Hyper(20,5,6,4));
+    	
+    	Geometric G = new Geometric();
+    	System.out.println(G.Geo(.45, .55, 3));
     }
 }

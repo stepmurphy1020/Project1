@@ -2,7 +2,7 @@ package Statlib;
 
 public class combinations
 {
-  public double comb(double n,double r){
+  public double comb(double n,double r ){
 	  DistFac dfac = new DistFac();
 		Factorial fac = new Factorial();
 		double f = dfac.DistFac1(n, r);

@@ -7,11 +7,16 @@ package Statlib;
  *
  */
 public class DistFac {
+	private double dfac = 1;
 	public double DistFac1(double n,double r) {
-		double q = Math.abs(n-r);
-		if(q==0)
-		return 1;
-		else
-		return(q*DistFac1(q-1,0));
+		double q = Math.abs(n-r);//number of times the largest number has to be ticked down
+		for(double i = 0; i <= q-1; i++) {
+			 double a = (n-i);
+			 dfac = dfac*a;
+			 //System.out.println(a);
+			 //System.out.println(b);
+			 //System.out.println(dfac);
+		}
+		return dfac;
 	}
 }

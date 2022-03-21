@@ -43,5 +43,6 @@ public class Main
     	Geometric G = new Geometric();
     	System.out.println("Geometric:");
     	System.out.println(G.Geo(.45, .55, 3)+ "\n");
+    	
     }
 }

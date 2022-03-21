@@ -1,5 +1,13 @@
 package function;
-
+/**
+ * The salter takes in two parameters how mnay values to salt, the first and what number to salt the y-values with, 
+ * it will either add or subtract this value depending on whichever is chosen by the roll.nextInt from the change[] array.
+ * 
+ * 
+ * 
+ * @author Stephen Murphy Jr
+ * 
+ */
 import java.util.ArrayList;
 import java.util.Random;
 import java.io.FileNotFoundException;

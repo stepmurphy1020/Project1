@@ -1,5 +1,11 @@
 package Statlib;
-
+/**
+*
+* 
+* 
+* @author Stephen Murphy
+*
+*/
 public class combinations
 {
   public double comb(double n,double r ){

@@ -1,5 +1,14 @@
 package function;
-
+/**
+ * The smoother takes the array list made by the salter and averages the two values around a y-value and writes that in as its
+ * new values, it does not go outside of the bounds set by the user.
+ * 
+ * 
+ * 
+ * @author Stephen Murphy Jr
+ * 
+ * 
+ */
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;

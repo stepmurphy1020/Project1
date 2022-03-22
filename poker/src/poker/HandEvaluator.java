@@ -1,5 +1,9 @@
 package poker;
-
+/**
+ * Evaluates the "hand" ArrayList<Card> to see what the outcome of it was 
+ * 
+ * 
+ */
 import java.util.ArrayList;
 
 public class HandEvaluator {

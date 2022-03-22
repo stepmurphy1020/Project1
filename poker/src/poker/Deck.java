@@ -1,11 +1,17 @@
 package poker;
-
+/**
+ * Creates an ArrayList<Card> "deck" with cards numbered 1-13, Ace = 1, J = 11, Q = 12, K = 13.
+ * it then shuffles this deck 
+ * the drawCard() method draws a random card from the shuffled deck and puts it into the ArrayList<Card> "Hand"
+ * which is used in the HandEvaluator class
+ * 
+ * @author Stephen Murphy Jr
+ */
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
 	public ArrayList<Card> deck;
-	public ArrayList<Card> shuffled;
 	
 	HandEvaluator K = new HandEvaluator();
 	

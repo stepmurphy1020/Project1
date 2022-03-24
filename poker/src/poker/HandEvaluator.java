@@ -27,23 +27,24 @@ public class HandEvaluator {
 		}
 		if(b==1) {System.out.println("True");}
 		System.out.println(count+" "+ comp);
+		System.out.println("You have One Pair");
 	}
 	public void tok() {
-		
+		System.out.println("You have Three of a Kind");
 	}
 	public void twopair() {
-		
+		System.out.println("You have Two Pair");
 	}
 	public void straight() {
-		
+		System.out.println("You have a Straight");
 	}
 	public void fullhouse() {
-		
+		System.out.println("You have a Full House");
 	}
 	public void flush() {
-		
+		System.out.println("You have a Flush");
 	}
 	public void fok() {
-		
+		System.out.println("You Four of a Kind");
 	}
 }

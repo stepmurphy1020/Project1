@@ -11,14 +11,14 @@ public class HandEvaluator {
 		
 	public static ArrayList<Card> hand = new ArrayList<Card>(4);
 	public void pair() { //this is for comparing two elements
-		int match = 0;
+		int match1 = 0;
 		for(int i = 0; i<hand.size();i++) {
 			for(int j=i+1; j<hand.size();j++) {
 				if(hand.get(i).getNumber()==hand.get(j).getNumber()){
-					match++;
+					match1++;
 					System.out.println(hand.get(i).getNumber()+ ", "+hand.get(j).getNumber());
-					if(match<2) {
-						if(match==1) {
+					while(match1==2) {
+						if(match1<=1) {
 							System.out.println("You have One Pair");
 					}else {
 						
@@ -53,7 +53,6 @@ public class HandEvaluator {
 		for(int i = 0; i<hand.size();i++) {
 			for(int j=i+1; j<hand.size();j++) {
 				if(hand.get(i).getNumber()==hand.get(i+1).getNumber()){
-					
 					match++;
 					if(match==2) {
 							System.out.println("You have Two Pair");
@@ -98,7 +97,7 @@ public class HandEvaluator {
 			if(hand.get(i).getSuite()==hand.get(i+1).getSuite()) {
 				match++;
 				if(match==5) {
-					System.out.println("You have a Fush");
+					System.out.println("You have a Flush");
 				}
 			}
 		}

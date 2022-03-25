@@ -17,7 +17,7 @@ public class HandEvaluator {
 				if(hand.get(i).getNumber()==hand.get(j).getNumber()){
 					match1++;
 					System.out.println(hand.get(i).getNumber()+ ", "+hand.get(j).getNumber());
-					while(match1==2) {
+					if(match1==2) {
 						if(match1<=1) {
 							System.out.println("You have One Pair");
 					}else {

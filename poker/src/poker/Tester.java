@@ -7,7 +7,13 @@ public class Tester {
 		Deal.draw();
 		System.out.println("Your Hand:");
 		System.out.println(g.hand);
+		
 		g.pair();
+		g.twopair();
+		g.tok();
+		g.fok();
+		g.flush();
+		g.straight();
 		}
 	}
 

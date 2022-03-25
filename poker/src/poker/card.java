@@ -9,9 +9,18 @@ public class Card {
 	public int number;
 	
 	public Card(String inputS, int inputNum) {
-		suite = inputS;
-		number = inputNum;
+		this.suite = inputS;
+		this.number = inputNum;
 	}
+
+	public int getNumber() {
+		return number;
+	}
+	
+	public String getSuite() {
+		return suite;
+	}
+	
 	
 	@Override
 	public String toString() {

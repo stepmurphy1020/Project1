@@ -5,46 +5,103 @@ package poker;
  * 
  */
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class HandEvaluator {
-	
+		
 	public static ArrayList<Card> hand = new ArrayList<Card>(4);
-	
-	//Card a = hand.get(0);
-	
 	public void pair() { //this is for comparing two elements
-		int count = 0;
-		int comp = 0;
-		int b = 0;
-		for(int i = 0; i<hand.size(); i++) {
-			comp++;
-			for(int j = i+1; j<hand.size(); j++) {
-				count++;
-				if(hand.get(i)==hand.get(j)){
-					 b = 1;
+		int match = 0;
+		for(int i = 0; i<hand.size()-1;i++) {
+			if(hand.get(i).getNumber()==hand.get(i+1).getNumber()){
+				match++;
+				System.out.println(match);
+				if(match<2) {
+					if(match==1) {
+						System.out.println("You have One Pair");
+					}
 				}
 			}
 		}
-		if(b==1) {System.out.println("True");}
-		System.out.println(count+" "+ comp);
-		System.out.println("You have One Pair");
 	}
+	
 	public void tok() {
-		System.out.println("You have Three of a Kind");
+		int match = 0;
+		for(int i = 0; i<hand.size()-1;i++) {
+			for(int j=1; j<i;j++) {
+				if(hand.get(i).getNumber()==hand.get(j).getNumber()) {
+					match++;
+					if(match<=4) {
+						if(match==3) {
+							System.out.println("You have Three of a Kind");
+						}
+					}
+				}
+			}
+		}
 	}
-	public void twopair() {
-		System.out.println("You have Two Pair");
+	
+	
+	public void twopair() { //checks to see if there are two different pairs
+		int match = 0;
+		for(int i = 0; i<hand.size()-1;i++) {
+			if(hand.get(i).getNumber()==hand.get(i+1).getNumber()){
+				int a = i;
+				match++;
+				if(match==2) {
+						System.out.println("You have Two Pair");
+					}else {
+						System.out.println("You do not have Two Pair");
+					}
+				}
+			}
+		}
+	
+	public void straight() {//sorts array and checks to see if each card is 1 less than the next card
+		for(int i = 0; i<hand.size()-1;i++) {
+			if(hand.get(i).getNumber()==hand.get(i+1).getNumber()) {
+				}
+			}
 	}
-	public void straight() {
-		System.out.println("You have a Straight");
-	}
-	public void fullhouse() {
-		System.out.println("You have a Full House");
-	}
+	/*public void fullhouse() {
+		int match = 0;
+		for(int i = 0; i<hand.size()-1;i++) {
+			if(hand.get(i).getNumber()==hand.get(i+1).getNumber()) {
+				match++;
+				if(match<4) {
+					if(match==3) {
+						
+					}
+					
+				}
+			}
+		}
+		
+	}*/
+	
 	public void flush() {
-		System.out.println("You have a Flush");
-	}
+		int match = 0;
+		for(int i = 0; i<hand.size()-1;i++) {
+			if(hand.get(i).getSuite()==hand.get(i+1).getSuite()) {
+				match++;
+				if(match==5) {
+					System.out.println("You have a Fush");
+				}
+				}
+			}
+		}
+
 	public void fok() {
-		System.out.println("You Four of a Kind");
-	}
+		int match = 0;
+		for(int i = 0; i<hand.size()-1;i++) {
+			if(hand.get(i).getNumber()==hand.get(i+1).getNumber()) {
+				match++;
+				if(match==4) {
+					System.out.println("You have Four of a Kind");
+				}
+				}
+			}
+		}
+
 }
+
